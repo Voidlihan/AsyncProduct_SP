@@ -1,0 +1,17 @@
+﻿<Window x:Class="AsyncProducts.CreateProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncProducts"
+        mc:Ignorable="d"
+        Title="CreateProduct" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBox x:Name="textBoxProductNameAdd" Text="Название" FontSize="21" BorderBrush="Blue" Foreground="Black" Width="500" Height="50" Margin="0 50 0 0"/>
+            <TextBox x:Name="textBoxProductCategoryAdd" Text="Категория" FontSize="21" BorderBrush="Blue" Foreground="Black" Width="500" Height="50" Margin="0 20 0 0"/>
+            <TextBox x:Name="textBoxProductPriceAdd" Text="Цена" FontSize="21" BorderBrush="Blue" Foreground="Black" Height="50" Width="500" Margin="0 30 0 0"/>
+            <Button x:Name="saveBtn" Content="Сохранить изменения" FontSize="20" FontWeight="Bold" Background="#FF431D95" Foreground="#FF579E2E" Width="250" Height="50" Margin="0 50 0 0" Click="Save"/>
+        </StackPanel>
+    </Grid>
+</Window>
