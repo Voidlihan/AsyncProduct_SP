@@ -36,13 +36,20 @@ namespace AsyncProducts
                 listBoxProducts.Items.Add(context.Products);
                 context.SaveChanges();
             }
+            if (listBoxProducts.SelectedItem != null)
+            {             
+                listBoxItemTech.Content = (listBoxProducts.SelectedItem as Product).Name;
+            }
         }
 
         private void ComplectSelect(object sender, RoutedEventArgs e)
         {
+            using (var context = new Context()) {
+                listBoxProducts.Items.Add(context.Products);
+                context.SaveChanges();
+            }
             if (listBoxProducts.SelectedItem != null)
             {
-                listBoxItemTech.Content = (listBoxProducts.SelectedItem as Product).Name;
                 listBoxItemComplect.Content = (listBoxProducts.SelectedItem as Product).Name;
             }
         }
